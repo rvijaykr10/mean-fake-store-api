@@ -1,0 +1,25 @@
+<div class="text-center" *ngIf="loader">
+  <img src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" alt="" />
+</div>
+<div *ngIf="!loader" class="d-flex justify-content-around align-content-center">
+  <div class="card my-3" style="width: 18rem; height: 800px">
+    <img
+      src="{{ product.image }}"
+      height="300"
+      class="card-img-top mt-3"
+      alt="..."
+    />
+    <div class="d-flex justify-content-between mt-3">
+      <span class="badge badge-info">{{ product.category | uppercase }}</span>
+      <span class="badge badge-success">&#8377;{{ product.price }}</span>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title text-center">
+        {{ product.title }}
+      </h5>
+      <p class="card-text text-justify">
+        {{ product.description }}
+      </p>
+    </div>
+  </div>
+</div>
